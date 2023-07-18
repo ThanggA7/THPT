@@ -1,46 +1,63 @@
-# Tên dự án
+# Tên Dự Án
 
-Mô tả ngắn gọn về dự án của bạn.
+[DỮ LIỆU VỀ ĐIỂM THI THPT QUỐC GIA]
 
-## Hướng dẫn
+## Mô tả
 
-Dưới đây là hướng dẫn để bạn đăng tải dự án của mình lên GitHub.
+[DỮ LIỆU THÔ THPT QUỐC GIA]
 
-### Bước 1: Tạo kho lưu trữ trên GitHub
+## Cài đặt
 
-1. Đăng nhập vào tài khoản GitHub của bạn (hoặc tạo một tài khoản mới nếu bạn chưa có).
-2. Tạo kho lưu trữ mới bằng cách nhấp vào nút "New" (hoặc "Tạo") trên trang chủ GitHub.
-3. Đặt tên cho kho lưu trữ và thêm mô tả (tuỳ chọn).
-4. Chọn tùy chọn để tạo kho lưu trữ công khai hoặc riêng tư.
-5. Nhấp vào nút "Create repository" (hoặc "Tạo kho").
+Dưới đây là hướng dẫn để cài đặt và chạy dự án của bạn.
 
-### Bước 2: Sao chép dự án của bạn
+### Yêu cầu Hệ thống
 
-1. Sao chép dự án từ GitHub bằng cách sử dụng Git hoặc tải xuống mã nguồn dưới dạng tệp ZIP.
-2. Giải nén tệp ZIP nếu bạn đã tải xuống dự án dưới dạng ZIP.
+Trước khi cài đặt, hãy đảm bảo rằng hệ thống của bạn đáp ứng các yêu cầu sau:
 
-### Bước 3: Cấu hình dự án
+- Python (phiên bản 3.6 trở lên)
 
-1. Mở tệp `main.py` và thay đổi bất kỳ cấu hình nào hoặc thêm chức năng mới theo nhu cầu của bạn.
-2. Lưu lại tệp `main.py`.
+### Bước 1: Sao chép Dự án
 
-### Bước 4: Đăng tải dự án lên GitHub
+Sao chép dự án từ kho lưu trữ GitHub bằng cách chạy lệnh sau:
+```bash
+git clone <đường_dẫn_kho_lưu_trữ>
+```
 
-1. Mở dòng lệnh hoặc bộ terminal.
-2. Di chuyển đến thư mục chứa dự án của bạn bằng cách sử dụng lệnh `cd` (ví dụ: `cd /đường/dẫn/thư/mục`).
-3. Khởi tạo kho lưu trữ Git bằng lệnh `git init`.
-4. Thêm tất cả các tệp và thư mục vào Git bằng lệnh `git add .`.
-5. Commit các thay đổi bằng lệnh `git commit -m "Thêm dự án của tôi"`.
-6. Liên kết kho lưu trữ trên GitHub với kho lưu trữ Git cục bộ bằng lệnh `git remote add origin <đường_dẫn_đến_kho_lưu_trữ_của_bạn>`.
-7. Đẩy dự án lên GitHub bằng lệnh `git push -u origin master`.
+### Bước 2: Cài đặt Thư viện
 
-Dự án của bạn đã được đăng tải lên GitHub. Bạn có thể truy cập kho lưu trữ trên GitHub và chia sẻ liên kết với những người khác.
+Cài đặt các thư viện cần thiết bằng cách chạy lệnh sau:
 
-## Đóng góp
+```bash
+pip install -r requirements.txt
+```
 
-Nếu bạn muốn đóng góp vào dự án, hãy tạo một nhánh mới, thực hiện các thay đổi của bạn và gửi yêu cầu kéo (Pull Request) tới dự án chính.
 
-## Giấy phép
+### Bước 3: Chạy Dự án
 
-[Thêm thông tin về giấy phép dự án (nếu có). Ví dụ: Giấy phép MIT.]
+Chạy dự án bằng cách chạy lệnh sau:
+```bash
+python main.py
+```
+
+## Cách Sử Dụng
+
+Dự án cung cấp các chức năng sau:
+
+1. Crawl Data: Thu thập dữ liệu từ trang web.
+2. Tra cứu điểm thi: Tìm kiếm và hiển thị điểm thi của một thí sinh.
+3. Phổ điểm các khối: Hiển thị phổ điểm của các khối.
+
+Khi chạy dự án, bạn sẽ được yêu cầu chọn một trong các chức năng trên bằng cách nhập số tương ứng và làm theo hướng dẫn trên màn hình.
+
+## Thư viện
+
+Dự án này sử dụng các thư viện sau:
+
+- `csv`: Được sử dụng để thao tác với tệp CSV.
+- `json`: Được sử dụng để xử lý dữ liệu JSON.
+- `requests`: Được sử dụng để gửi yêu cầu HTTP.
+- `colorama`: Được sử dụng để thay đổi màu sắc văn bản trong cửa sổ dòng lệnh.
+- `matplotlib`: Được sử dụng để tạo biểu đồ phân phối điểm.
+- `mplcursors`: Được sử dụng để hiển thị giá trị khi di chuột qua biểu đồ.
+
 
