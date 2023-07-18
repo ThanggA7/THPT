@@ -7,44 +7,7 @@ from src.score_distribution import plot_score_distribution, calculate_average_sc
 init(autoreset=True)
 
 def crawl_data():
-    start_sbd = int(input("Start SBD: "))
-    end_sbd = int(input("End SBD: "))
-    with open('data.csv', 'w', newline='') as file:
-        writer = csv.writer(file)
-        for sbd in range(start_sbd, end_sbd + 1):
-            try:
-                url = f"https://dantri.com.vn/thpt/1/0/99/{sbd}/2023/0.2/search-gradle.htm"
-                response = requests.get(url)
-
-                if response.status_code == 200:
-                    json_data = response.json()
-
-                    if json_data:
-                        student_data = json_data["student"]
-
-                        row_data = [
-                            student_data.get('sbd'),
-                            student_data.get('toan'),
-                            student_data.get('van'),
-                            student_data.get('ngoaiNgu'),
-                            student_data.get('vatLy'),
-                            student_data.get('hoaHoc'),
-                            student_data.get('sinhHoc'),
-                            student_data.get('diemTBTuNhien'),
-                            student_data.get('lichSu'),
-                            student_data.get('diaLy'),
-                            student_data.get('gdcd'),
-                            student_data.get('diemTBXaHoi')
-                        ]
-                        writer.writerow(row_data)
-
-                        print(f"{Fore.GREEN}[CRAWL] {sbd} thành công")
-
-                if sbd == end_sbd:
-                    print(f"{Fore.CYAN}Complete: Data crawling and export complete.")
-
-            except Exception as e:
-                print(f"{Fore.RED}[CRAWL] {sbd} không thành công")
+    print("do nó spam quá nên mình tạm thời đóng lại đã :()")
 
 def search_score():
     sbd = int(input("SBD: "))
